@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/Text" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp" >
+
+        <Button
+            android:id="@+id/turnOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/on" />
+
+        <Button
+            android:id="@+id/turnOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/off" />
+
+        <Button
+            android:id="@+id/paired"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/List" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:id="@+id/layout2">
+
+
+        <Button
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Find" />
+
+        <ListView
+            android:id="@+id/listView1"
+            android:layout_width="fill_parent"
+            android:layout_height="200dp" >
+
+        </ListView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/layout2"
+        android:id="@+id/layout3">
+
+
+        <Button
+            android:id="@+id/buttonClient"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Client"
+            android:onClick="client" />
+        <Button
+            android:id="@+id/buttonServer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Server"
+            android:onClick="server" />
+        <Button
+            android:id="@+id/buttonClearText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear Text"
+            android:onClick="clearText" />
+    </LinearLayout>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout3"
+        android:text="This is input/output box"
+        android:id="@+id/editTextIO"/>
+
+</RelativeLayout>
+
